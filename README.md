@@ -1,5 +1,4 @@
-# Setup
-## Creating virtual enviorment
+# Creating virtual enviorment
 
 python -m venv venv
 
@@ -10,5 +9,9 @@ source venv/bin/activate
 venv/bin/activate
 
 ### Note: sometimes its Lib/ instead of bin/
+
+# Installing requirements
+## make sure you are using your virtual env
+pip install -r requirements.txt
 
 you are ready to go now!
