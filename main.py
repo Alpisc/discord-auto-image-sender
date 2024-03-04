@@ -3,6 +3,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 import os
 import time
+import imghdr
 
 load_dotenv()
 
@@ -21,6 +22,7 @@ async def images(ctx):
     amount = 0
     total =len(os.listdir())
     for filename in os.listdir(directory+"/Images"):
+        if not filename.endswith((".png", ".jpg", ".webp", ".jpeg", ".bmp"): continue
         file_path = os.path.join(directory+"/Images", filename)
         if os.path.isfile(file_path):
             file = discord.File(file_path, filename)
