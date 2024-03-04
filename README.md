@@ -14,4 +14,7 @@ venv/bin/activate
 ## make sure you are using your virtual env
 pip install -r requirements.txt
 
+# Adjusting .env
+adjust the entry settings within the .env file to fit your needs
+
 you are ready to go now!
