@@ -8,6 +8,7 @@ load_dotenv()
 
 TOKEN = os.environ["TOKEN"]
 delete = bool(os.environ["DELETE"])
+imageonly = bool(os.environ["IMAGEONLY"])
 
 client = commands.Bot(command_prefix=">", self_bot=True)
 
@@ -21,7 +22,7 @@ async def images(ctx):
     amount = 0
     total =len(os.listdir())
     for filename in os.listdir(directory+"/Images"):
-        if not filename.endswith((".png", ".jpg", ".webp", ".jpeg", ".bmp"): continue
+        if imageonly and not filename.endswith((".png", ".jpg", ".webp", ".jpeg", ".bmp"): continue
         file_path = os.path.join(directory+"/Images", filename)
         if os.path.isfile(file_path):
             file = discord.File(file_path, filename)
