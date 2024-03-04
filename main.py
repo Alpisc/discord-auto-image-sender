@@ -24,7 +24,7 @@ async def images(ctx):
         file_path = os.path.join(directory+"/Images", filename)
         if os.path.isfile(file_path):
             file = discord.File(file_path, filename)
-            print("Sending: {filename} from {file_path} {total - amount} images remaining")
+            print(f"Sending: {filename} from {file_path} {total - amount} images remaining")
             try:
                 await ctx.send(file=file)
             except Exception:
