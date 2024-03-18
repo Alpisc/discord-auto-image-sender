@@ -22,10 +22,10 @@ async def on_ready():
 async def images(ctx):
     directory = os.getcwd()
     amount = 0
-    total = len(os.listdir("Images/"))
-    for filename in os.listdir(directory+"/Images"):
+    total = len(os.listdir("Files/"))
+    for filename in os.listdir(directory+"/Files"):
         if imageonly and not filename.endswith((".png", ".jpg", ".webp", ".jpeg", ".bmp")): continue
-        file_path = os.path.join(directory+"/Images", filename)
+        file_path = os.path.join(directory+"/Files", filename)
         if os.path.isfile(file_path):
             file = discord.File(file_path, filename)
             print(f"Sending: \"{filename}\" - {total - amount} files remaining")
