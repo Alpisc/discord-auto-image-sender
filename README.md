@@ -1,3 +1,6 @@
+# What am i
+a selfbot tool to send a bulk of images (and/ or files) on discord one by one
+
 # Creating virtual enviorment
 
 python -m venv venv
