@@ -12,7 +12,7 @@ imageonly = bool(os.environ["IMAGEONLY"])
 cooldown = int(os.environ["COOLDOWN"])
 prefix = os.environ["PREFIX"]
 
-client = commands.Bot(command_prefix=">", self_bot=True)
+client = commands.Bot(command_prefix=prefix, self_bot=True)
 
 @client.event
 async def on_ready():
