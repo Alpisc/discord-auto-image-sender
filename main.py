@@ -24,7 +24,7 @@ async def images(ctx):
     amount = 0
     total = len(os.listdir("Files/"))
     for filename in os.listdir(directory+"/Files"):
-        if imageonly and not filename.endswith((".png", ".jpg", ".webp", ".jpeg", ".bmp", ".gif")): continue
+        if imageonly and not filename.endswith((".png", ".jpg", ".webp", ".jpeg", ".bmp", ".gif", ".webm")): continue
         file_path = os.path.join(directory+"/Files", filename)
         if os.path.isfile(file_path):
             file = discord.File(file_path, filename)
