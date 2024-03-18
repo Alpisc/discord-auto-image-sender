@@ -5,6 +5,7 @@ python -m venv venv
 ## Activating virtual enviorment
 ### Linux
 source venv/bin/activate
+
 Note: sometimes its Lib/ instead of bin/
 ### Windows
 venv\Scripts\activate
