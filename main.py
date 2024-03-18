@@ -9,7 +9,7 @@ load_dotenv()
 TOKEN = os.environ["TOKEN"]
 delete = bool(os.environ["DELETE"])
 imageonly = bool(os.environ["IMAGEONLY"])
-cooldown = int(os.environ["COOLDOWN"])
+cooldown = float(os.environ["COOLDOWN"])
 prefix = os.environ["PREFIX"]
 
 client = commands.Bot(command_prefix=prefix, self_bot=True)
