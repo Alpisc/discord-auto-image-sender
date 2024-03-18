@@ -9,12 +9,14 @@ load_dotenv()
 TOKEN = os.environ["TOKEN"]
 delete = bool(os.environ["DELETE"])
 imageonly = bool(os.environ["IMAGEONLY"])
+cooldown = int(os.environ["COOLDOWN"])
+prefix = os.environ["PREFIX"]
 
 client = commands.Bot(command_prefix=">", self_bot=True)
 
 @client.event
 async def on_ready():
-    print(f'We have logged in as {client.user}')
+    print(f'We have logged in as {client.user} - To get started, type \"{prefix}images\"')
 
 @client.command()
 async def images(ctx):
@@ -33,8 +35,7 @@ async def images(ctx):
                 print("Bad image, couldnt send")
             if delete: os.remove(file_path)
             amount = amount + 1
-            time.sleep(5)
+            time.sleep(cooldown)
     print(f"Done! send {amount} Images")
-            
 
 client.run(TOKEN)
