@@ -20,7 +20,7 @@ async def on_ready():
 async def images(ctx):
     directory = os.getcwd()
     amount = 0
-    total =len(os.listdir())
+    total = len(os.listdir("Images/"))
     for filename in os.listdir(directory+"/Images"):
         if imageonly and not filename.endswith((".png", ".jpg", ".webp", ".jpeg", ".bmp")): continue
         file_path = os.path.join(directory+"/Images", filename)
